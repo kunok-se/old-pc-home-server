@@ -1,6 +1,6 @@
 # Breathing New Life into a 15-Year-Old Laptop: My Home Server & Website Journey
 
-Welcome! If you have ever looked at an old, gathering-dust computer in your closet and wondered if it still had a pulse, this story is for you. Here is how I turned a vintage 15-year-old laptop into a proud, 24/7 energy-efficient home server running **Ubuntu** and **Docker**.
+Welcome! If you have ever looked at an old, gathering-dust computer in your closet and wondered if it still had a pulse, this story is for you. Here is how I turned a vintage 15-year-old laptop into a proud, 24/7 energy-efficient home server running **Ubuntu Desktop** and **Docker**.
 
 🌐 **Live GitHub Pages Documentation:** [https://kunok-se.github.io/old-pc-home-server](https://kunok-se.github.io/old-pc-home-server)
 
@@ -20,7 +20,7 @@ Instead of letting a perfectly capable machine end up as e-waste, I decided to g
 
 ## 🧩 The Plot Twist: When Ubuntu Couldn't Find the Hard Disk
 
-Every good tech project has a moment of panic. When I first booted up the Ubuntu installer on this classic laptop, **the installer couldn't see the hard drive at all!**
+Every good tech project has a moment of panic. When I first booted up the Ubuntu Desktop installer on this classic laptop, **the installer couldn't see the hard drive at all!**
 
 ### The Detective Work
 - **The Culprit:** The aging **Western Digital WDC WD5000BPVT-7 (500GB 2.5" SATA HDD)** paired with the vintage BIOS/UEFI controller settings of a 2011 motherboard. 
@@ -30,17 +30,17 @@ Every good tech project has a moment of panic. When I first booted up the Ubuntu
 
 ## 📊 Performance & Benchmark Check
 
-You might wonder: *Can a 15-year-old laptop actually handle server workloads?* 
+You might wonder: *Can a 15-year-old laptop running Ubuntu Desktop handle server workloads?* 
 
 Let's look at the numbers:
 
-### 1. System Resources (Idle)
+### 1. System Resources
 ```bash
 $ free -h
                total        used        free      shared  buff/cache   available
 Mem:           3.2Gi       1.1Gi       152Mi        20Mi       1.9Gi       1.8Gi
 ```
-With a clean headless Ubuntu setup, idle RAM consumption hovers around **1 GB**, leaving over 2 GB of RAM entirely free for running containers.
+Even with Ubuntu Desktop installed, idle RAM consumption hovers around **1.1 GB**, leaving plenty of breathing room for running Docker containers and web services.
 
 ### 2. Disk I/O Benchmark
 Testing sequential write speeds on the vintage Western Digital SATA drive:
@@ -50,13 +50,13 @@ $ dd if=/dev/zero of=testfile bs=1M count=100 conv=fdatasync
 100+0 records out
 100+857600 bytes (105 MB, 100 MiB) copied, 4.7 s, 22 MB/s
 ```
-While it won't break any NVMe speed records, **22 MB/s** sequential write is more than enough for serving static websites, markdown documentation, and lightweight database queries.
+While it won't break any NVMe speed records, **22 MB/s** sequential write is more than enough for serving static websites, markdown documentation, and lightweight containerized workloads.
 
 ---
 
 ## 🐳 Bringing It to Life with Docker
 
-To make software management painless, I installed **Docker** and **Docker Compose**. Now, everything runs in isolated, portable containers.
+To make software management painless, I installed **Docker** and **Docker Compose** on Ubuntu Desktop. Now, everything runs in isolated, portable containers.
 
 ### Quick Setup Commands on Ubuntu:
 ```bash
@@ -74,7 +74,7 @@ sudo systemctl enable --now docker
 
 ## 🚀 Final Thoughts
 
-Reviving a 15-year-old PC into a home server is one of the most satisfying weekend projects. Despite old hardware hurdles like invisible hard drives and vintage BIOS quirks, patience and Linux give old machines a magnificent second act.
+Reviving a 15-year-old PC with **Ubuntu Desktop** and **Docker** into a home server is one of the most satisfying weekend projects. Despite old hardware hurdles like invisible hard drives and vintage BIOS quirks, patience and Linux give old machines a magnificent second act.
 
 ---
 
