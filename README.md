@@ -18,13 +18,13 @@ Instead of letting a perfectly capable machine end up as e-waste, I decided to g
 
 ---
 
-## 🧩 The Plot Twist: When Ubuntu Couldn't Find the Hard Disk
+## 🧩 The Plot Twist: When Ubuntu Server Couldn't Find the Hard Disk
 
-Every good tech project has a moment of panic. When I first booted up the Ubuntu Desktop installer on this classic laptop, **the installer couldn't see the hard drive at all!**
+Every good tech project has a moment of unexpected turns. When I first tried installing **Ubuntu Server** on this classic laptop, **the installer couldn't see the vintage hard drive at all!**
 
-### The Detective Work
-- **The Culprit:** The aging **Western Digital WDC WD5000BPVT-7 (500GB 2.5" SATA HDD)** paired with the vintage BIOS/UEFI controller settings of a 2011 motherboard. 
-- **The Fix:** Booting into the BIOS and adjusting the SATA operation mode (switching between RAID/AHCI/Legacy IDE settings) alongside re-partitioning the drive allowed Ubuntu to finally recognize the disk and proceed with a clean installation.
+### The Solution
+- **The Pivot:** Instead of getting stuck troubleshooting low-level storage drivers or BIOS controller modes on a 15-year-old motherboard, I switched to the **Ubuntu Desktop** installer.
+- **The Result:** Ubuntu Desktop recognized the **Western Digital WDC WD5000BPVT-7 (500GB 2.5" SATA HDD)** out-of-the-box, allowing a smooth, hassle-free installation and setting up the foundation for a rock-solid home server.
 
 ---
 
@@ -74,7 +74,7 @@ sudo systemctl enable --now docker
 
 ## 🚀 Final Thoughts
 
-Reviving a 15-year-old PC with **Ubuntu Desktop** and **Docker** into a home server is one of the most satisfying weekend projects. Despite old hardware hurdles like invisible hard drives and vintage BIOS quirks, patience and Linux give old machines a magnificent second act.
+Reviving a 15-year-old PC with **Ubuntu Desktop** and **Docker** into a home server is one of the most satisfying weekend projects. Bouncing from Ubuntu Server to Ubuntu Desktop turned out to be the magic key to getting past vintage hardware hurdles and giving this old machine a magnificent second act.
 
 ---
 
